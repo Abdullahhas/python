@@ -20,3 +20,6 @@
 
 username = "abdullah"
 username[1:3] -> 1 is include and 3 is not include means it gives "bd"
+
+dir(username)  -> dir ka matlab ye he ke hm chk kar skte hein ke kon kon se method is par lga skte hein
+
