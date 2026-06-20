@@ -26,3 +26,84 @@ print(word[4:42])
 #The built-in function len() returns the length of a string:
 print(len(word))
 
+
+# Methods to write strings
+
+# 1- Single Quotes
+name = 'Abdullah'
+
+# 2-Double Quotes
+name = "Abdullah"
+
+# 3 - Triple Quotes  Use for multi line text
+text = """Hello
+How are you?
+I am fine."""
+
+# What is unicode
+
+# Python duniya ki lagbhag har language support karta hai.
+
+# These are all strings
+english = "Hello"
+urdu = "السلام علیکم"
+chinese = "你好"
+
+# Adjacent Strings Automatically Join 
+
+text = ("Hello "
+        "World")
+
+# python will take it as
+text = "Hello World"
+
+
+# String Constructor str()
+# convert any object into string
+
+age = 21
+a = str(age)
+print(type(a))
+
+
+# efficient way to join strings
+words = ["Hello", "World"]
+
+result = " ".join(words)
+
+print(result)
+
+
+# bytes
+
+b = b'Hello'
+print(type(b))
+
+
+# bytes to string
+b = b'Hello'
+
+text = str(b, encoding='utf-8')
+
+print(text)
+
+# or
+
+text = b.decode('utf-8')    
+
+
+# f strings
+
+name = "Abdullah"
+age = 21
+
+print(f"My name is {name} and I am {age}")
+
+
+# It is possible to nest f-strings:
+name = 'world'
+print(f'Repeated:{f' hello{name}' * 3}')
+
+
+
+
