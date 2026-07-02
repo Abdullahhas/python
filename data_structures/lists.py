@@ -155,6 +155,123 @@ a.sort(reverse = True)
 10 - list.reverse() #just reverse the order
 
 11- list.copy()
-# creates a shallow copy
+# creates a shallow 
 
+
+
+
+
+# List as stack
+
+stack = [3, 4, 5]
+stack.append(6)
+stack.append(7)
+stack
+
+stack.pop()
+
+stack
+
+stack.pop()
+
+stack.pop()
+
+stack
+
+
+# Lists as queues
+from collections import deque
+queue = deque(["Eric", "John", "Michael"])
+queue.append("Terry")           # Terry arrives
+queue.append("Graham")          # Graham arrives
+queue.popleft()                 # The first to arrive now leaves
+
+queue.popleft()                 # The second to arrive now leaves
+
+queue                           # Remaining queue in order of arrival``
+
+
+
+
+# List comprehensions
+
+# A list comprehension is simply a shorter and cleaner way to create a list.
+
+# Use them when you want to build a new list from an iterable in a concise and readable way.
+
+# syntax
+# [expression for variable in iterable]
+numbers = [x for x in range(5)]  # Take x for every x in range 5
+squares = [x**2 for x in range(10)] # Take x square for every x in range 10
+even = [x for x in range(10) if x % 2 == 0]
+pairs = [(x,y) for x in [1,2] for y in [3,4]]
+
+# Instead of writing
+numbers = []
+for x in range(5):
+    numbers.append(x)
+
+# we can write
+numbers = [x for x in range(5)]  # for every x in range(5) put x in the new list
+
+# map(lambda)
+
+list(map(lambda x : x**2 , range(10))) # same result but it is difficult to readable
+
+# filtering
+vec = [-4,-2,0,2,4]
+[x for x in vec if x>=0]
+
+# Applying functions
+[abs(x) for x in vec]
+
+# calling methods
+freshfruit = [
+    " banana",
+    " apple ",
+    " mango "
+]
+
+[x.strip() for x in freshfruit]
+
+
+# Tuples
+[(x,x**2) for x in range(6)]
+
+[
+(0,0),
+(1,1),
+(2,4),
+(3,9),
+(4,16),
+(5,25)
+]
+
+
+# Filtering a nested list
+
+vec = [
+ [1,2,3],
+ [4,5,6],
+ [7,8,9]
+]
+
+# normal 
+result=[]
+
+for row in vec:
+
+    for num in row:
+
+        result.append(num)
+
+# list comprehension
+[num for row in vec for num in row]
+
+
+
+# read it like that
+# For every row
+# For every number in that row
+# Put number into new list
 
