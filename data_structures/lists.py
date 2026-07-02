@@ -1,3 +1,5 @@
+# Lists are mutable
+
 list.append() # add item at the end
 
 # Similar to a[len(a):] = [x].
